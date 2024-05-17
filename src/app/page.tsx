@@ -19,7 +19,7 @@ export default function Home() {
           <Button>Open Drawer</Button>
         </DrawerTrigger>
         <DrawerContent>
-          <Input placeholder="focus me and spawn data" />
+          <Input autoFocus placeholder="focus me and spawn data" />
           <div className="flex flex-col gap-2">
             {data.map((d) => (
               <div className="h-60 w-full bg-red-400 border" key={d} />

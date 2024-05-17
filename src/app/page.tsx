@@ -18,15 +18,16 @@ export default function Home() {
         <DrawerTrigger asChild>
           <Button>Open Drawer</Button>
         </DrawerTrigger>
-        <DrawerContent>
-          <Input placeholder="focus me and spawn data" />
-          <div className="flex flex-col gap-2">
-            {data.map((d) => (
-              <div className="h-60 w-full bg-red-400 border" key={d} />
-            ))}
+        <DrawerContent className="max-h-[96%] !h-auto">
+          <div className="h-full w-full flex flex-col overflow-auto">
+            <Input placeholder="focus me and spawn data" />
+            <div className="flex flex-col gap-2">
+              {data.map((d) => (
+                <div className="h-60 w-full bg-red-400 border" key={d} />
+              ))}
+            </div>
+            <Button onClick={spawnData}>Spawn data</Button>
           </div>
-
-          <Button onClick={spawnData}>Spawn data</Button>
         </DrawerContent>
       </Drawer>
     </main>

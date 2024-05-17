@@ -22,9 +22,7 @@ export default function Home() {
           <div className="bg-black h-48 w-full" />
           <Input placeholder="focus me and spawn data" />
           {data.map((d) => (
-            <p key={d} className="text-red-200 text-xl">
-              {d}
-            </p>
+            <div className="h-60 w-full bg-red-400" key={d} />
           ))}
 
           <Button onClick={spawnData}>Spawn data</Button>
